@@ -24,7 +24,8 @@ export default defineConfig({
             {
               text: '开始',
               items: [
-                { text: '介绍', link: '/guide/' }
+                { text: '介绍', link: '/guide/' },
+                { text: '已知问题', link: '/guide/known-issues' }
               ]
             },
             {
