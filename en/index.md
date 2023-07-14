@@ -4,22 +4,13 @@ layout: home
 
 hero:
   name: "TrChat"
-  text: "TrChat document"
-  tagline: My great project tagline
+  text: "Advanced chat control for Minecraft servers"
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Get Started
+      link: /en/guide/
     - theme: alt
-      text: API Examples
-      link: /api-examples
-
-features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+      text: View on Github
+      link: 'https://github.com/TrPlugins/TrChat'
 ---
 

@@ -25,15 +25,24 @@ export default defineConfig({
               text: '开始',
               items: [
                 { text: '介绍', link: '/guide/' },
+                { text: '安装', link: '/guide/installation' },
+                { text: '配置', link: '/guide/configuration' },
                 { text: '已知问题', link: '/guide/known-issues' }
               ]
             },
             {
-              text: 'Examples',
+              text: '基础',
               items: [
-                { text: 'Markdown Examples', link: '/guide/markdown-examples' },
-                { text: 'Runtime API Examples', link: '/guide/api-examples' }
+                { text: '命令', link: '/guide/commands' },
+                { text: '功能', link: '/guide/functions' },
+                { text: '颜色', link: '/guide/colors' }
               ]
+            },
+            {
+              text: '频道'
+            },
+            {
+              text: '开发'
             },
             {
               items: [
