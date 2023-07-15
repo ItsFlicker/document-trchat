@@ -12,6 +12,8 @@ Options:
   Depend-Expansions: ['player', 'server']
   # 是否禁止玩家使用tab补全命令
   Prevent-Tab-Complete: false
+  # 强制使用跨服类型, 识别错误时可使用(AUTO, NONE, BUNGEE, VELOCITY, REDIS)
+  Proxy: AUTO
 
 # 默认频道
 Channel:
