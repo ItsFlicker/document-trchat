@@ -4,7 +4,7 @@
 
 **[TrChat](https://github.com/TrPlugins/TrChat)** 是基于 [TabooLib](https://github.com/TabooLib/taboolib) 开发，发布于 2019-8-16 的高级聊天系统插件
 
-**1.0~1.7** 版本: 由 [Arasple](https://github.com/Arasple) 使用 TabooLib 5 开发，最高支持1.16版本
+**1.0~1.7** 版本: 由 [Arasple](https://github.com/Arasple) 使用 TabooLib 5 开发，最高支持1.16.5版本
 
 **1.8~1.9** 版本: 由 [ItsFlicker](https://github.com/ItsFlicker) 在 1.7 版本基础上使用 TabooLib 6 开发，已停止维护
 

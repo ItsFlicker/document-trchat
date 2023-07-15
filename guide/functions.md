@@ -14,7 +14,7 @@ Command-Controller:
   List:
     - 'ver(sion)?(s)?{condition: perm "trchat.admin"}' # 无trchat.admin权限禁止执行/ver(s)或/version(s)命令
     - 'arasple{exact: true}{condition: perm "trchat.admin"}' # 仅禁止执行/arasple命令
-    - 'ban{relocate: mute {0};kick {0}}' # /ban <player>命令跳转至/mute <player>和/kick <player>命令
+    - 'punish{relocate: mute {0};kick {0}}' # /punish <player>命令跳转至/mute <player>和/kick <player>命令
     - 'shout{cooldown: 3}' # shout命令三秒冷却
 ```
 

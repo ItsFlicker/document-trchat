@@ -31,7 +31,7 @@ export default defineConfig({
               ]
             },
             {
-              text: '基础',
+              text: '使用',
               items: [
                 { text: '命令', link: '/guide/commands' },
                 { text: '功能', link: '/guide/functions' },
@@ -39,10 +39,19 @@ export default defineConfig({
               ]
             },
             {
-              text: '频道'
+              text: '频道',
+              items: [
+                { text: '创建', link: '/guide/channel/create' },
+                { text: '设置', link: '/guide/channel/settings' },
+                { text: 'JSON组件', link: '/guide/channel/json' },
+                { text: '消息格式', link: '/guide/channel/format' }
+              ]
             },
             {
-              text: '开发'
+              text: '开发',
+              items: [
+                { text: 'API', link: '/guide/api' }
+              ]
             },
             {
               items: [
