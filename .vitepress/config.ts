@@ -2,14 +2,27 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "TrChat",
+  title: "TrChat Document",
   description: "TrChat document",
+  cleanUrls: true,
+  lastUpdated: true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-
+    logo: '/logo.png',
     socialLinks: [
       { icon: 'github', link: 'https://github.com/TrPlugins/TrChat' }
-    ]
+    ],
+    footer: {
+      message: 'Made by ItsFlicker with ❤️',
+      copyright: 'Copyright © 2023 TrPlugins'
+    },
+    editLink: {
+      pattern: 'https://github.com/ItsFlicker/document-trchat/edit/main/:path',
+      text: 'Edit this page on Github'
+    },
+    search: {
+      provider: 'local'
+    }
   },
   locales: {
       root: {

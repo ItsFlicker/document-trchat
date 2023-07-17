@@ -31,6 +31,10 @@ public class Demo implements Listener {
 }
 ```
 
+::: tip
+自TrChat-2.0.0起, 已不会取消AsyncPlayerChatEvent
+:::
+
 ### TrChatReloadEvent
 
 ```kotlin
