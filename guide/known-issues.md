@@ -38,6 +38,10 @@ java.lang.AbstractMethodError: Receiver class org.sqlite.Connection does not def
 ```
 > 将 **TrChat/datasource.yml** 中的 **ConnectionTestQuery** 改为 **SELECT 1**
 
+## 数据库过时问题
+
+> 将 **TrChat/datasource.yml** 中的 **DriverClassName** 改为 **com.mysql.cj.jdbc.Driver**
+
 ## PlaceholderAPI 报错问题
 
 ```

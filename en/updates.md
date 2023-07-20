@@ -1,5 +1,37 @@
 # TrChat Update Logs #
 
+## VERSION 2.0
+- #### 2.0.2 (2023.7.20)
+  - 支持hover内使用Kether内联
+  - 增加%trchat_lastprivatemessage%
+  - 增加更改最大聊天发包大小的选项
+  - 增加关闭更新检测的选项
+  - 在Paper环境中取消原版控制台聊天显示
+  - 修复高版本龙核无法使用hex颜色
+  - 修复潜在的papi/Kether替换漏洞
+
+- #### 2.0.1 (2023.7.18)
+  - Fixed 1.19.2 proxy messaging error
+  - Fixed #264 (proxy channels don't auto reload after restarting)
+  - Fixed database error
+  - Fixed Force-Proxy
+  - Fixed GitHub actions
+  
+- #### 2.0.0 ()
+  - ##### 修复
+    - 后台使用喊话功能时重复
+    - 在Arclight无法使用
+    - 不支持跨服屏蔽/禁言玩家
+    - 在Velocity报错
+    - 数据库报错
+    - 关闭服务器时任务未正确关闭
+    - At功能出错
+    - 部分服务端后台信息重复
+    - 私聊提醒不生效
+  - ##### 新增
+    - Redis支持所有Bungee/Velocity的功能
+    - 在1.19+可以在聊天中补全群组所有玩家
+
 #### VERSION 1.9
 
 - #### 1.90-R2
