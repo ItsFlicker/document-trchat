@@ -40,6 +40,10 @@ java.lang.AbstractMethodError: Receiver class org.sqlite.Connection does not def
 
 ## 数据库过时问题
 
+```
+Loading class 'com.mysql.jdbc.Driver'.This is deprecated.
+```
+
 > 将 **TrChat/datasource.yml** 中的 **DriverClassName** 改为 **com.mysql.cj.jdbc.Driver**
 
 ## PlaceholderAPI 报错问题
@@ -80,6 +84,13 @@ Options:
 
 > 关闭 **server.properties** 中的 **enforce-secure-profile**
 
-## 玩家名字被过滤为*
+## 玩家名字被过滤
 
-TODO
+- 关闭filter.yml中的Enable.Chat
+- 在频道文件中增加
+
+```yaml
+Events:
+  Process: |-
+    filter get &message
+```
