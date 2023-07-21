@@ -31,7 +31,7 @@ java.lang.RuntimeException: Runtime environment setup failed, please feedback! (
 
 ```
 [00:00:00 ERROR]: Error occurred while enabling TrChat v2.0.0 (Is it up to date?)
-java.lang.AbstractMethodError: Receiver class org.sqlite.Connection does not define or inherit an implementation of the resolved method abstract isValid(I)Z of interface java.sql.Connection.
+java.lang.AbstractMethodError: Receiver class org.sqlite.Connection does not define or inherit an implementation of the resolved method abstract isValid(I)Z of interface java.sql.Connection
         at com.zaxxer.hikari_4_0_3.pool.PoolBase.checkValidationSupport(PoolBase.java:464) ~[?:?]
         at com.zaxxer.hikari_4_0_3.pool.PoolBase.checkDriverSupport(PoolBase.java:447) ~[?:?]
         at com.zaxxer.hikari_4_0_3.pool.PoolBase.setupConnection(PoolBase.java:416) ~[?:?]
@@ -72,6 +72,16 @@ Loading class 'com.mysql.jdbc.Driver'.This is deprecated.
 > 关闭 **CMI/Settings/Chat.yml** 中的 **Colors.CleanUp**
 
 ## 聊天无法向下版本跨服
+
+```
+[00:00:00] [Server thread/WARN]: Could not pass incoming plugin message to TrChat v2.0.0
+java.lang.NullPointerException: null
+	at net.md_5.bungee.chat.BaseComponentSerializer.deserialize(BaseComponentSerializer.java:65) ~[patched_1.8.8.jar:git-PaperSpigot-445]
+	at net.md_5.bungee.chat.TextComponentSerializer.deserialize(TextComponentSerializer.java:25) ~[patched_1.8.8.jar:git-PaperSpigot-445]
+	at net.md_5.bungee.chat.TextComponentSerializer.deserialize(TextComponentSerializer.java:17) ~[patched_1.8.8.jar:git-PaperSpigot-445]
+	at com.google.gson.TreeTypeAdapter.read(TreeTypeAdapter.java:58) ~[patched_1.8.8.jar:git-PaperSpigot-445]
+        ...
+```
 
 聊天频道文件中设置
 
