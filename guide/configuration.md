@@ -4,16 +4,25 @@
 
 ```yaml
 Options:
+  # 是否检查更新并提醒
+  Check-Update: true
+  # 强制使用跨服类型, 识别错误时可更改(AUTO, NONE, BUNGEE, VELOCITY)
+  Proxy: AUTO
   # 记录普通聊天格式到plugins/TrChat/logs目录下的格式
   Log-Normal: '[{0}] {1}: {2}'
   # 记录私聊聊天格式到plugins/TrChat/logs目录下的格式
   Log-Private: '[{0}] {1} -> {2}: {3}'
+  # 自动删除多少天前的聊天记录
+  Log-Delete-Time: 0
   # 强制变量扩展
   Depend-Expansions: ['player', 'server']
   # 是否禁止玩家使用tab补全命令
   Prevent-Tab-Complete: false
-  # 强制使用跨服类型, 识别错误时可更改(AUTO, NONE, BUNGEE, VELOCITY, REDIS)
-  Proxy: AUTO
+  # 聊天发包最大长度限制
+  Component-Max-Length: 32766
+  # 是否允许Kether宽容解析
+  Kether-Allow-Tolerance-Parser: true
+  
 
 # 默认频道
 Channel:

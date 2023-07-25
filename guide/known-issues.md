@@ -31,7 +31,7 @@ java.lang.RuntimeException: Runtime environment setup failed, please feedback! (
 
 ```
 [00:00:00 ERROR]: Error occurred while enabling TrChat v2.0.0 (Is it up to date?)
-java.lang.AbstractMethodError: Receiver class org.sqlite.Connection does not define or inherit an implementation of the resolved method abstract isValid(I)Z of interface java.sql.Connection
+java.lang.AbstractMethodError: Receiver class org.sqlite.Conn does not define or inherit an implementation of the resolved method abstract isValid(I)Z of interface java.sql.Connection
         at com.zaxxer.hikari_4_0_3.pool.PoolBase.checkValidationSupport(PoolBase.java:464) ~[?:?]
         at com.zaxxer.hikari_4_0_3.pool.PoolBase.checkDriverSupport(PoolBase.java:447) ~[?:?]
         at com.zaxxer.hikari_4_0_3.pool.PoolBase.setupConnection(PoolBase.java:416) ~[?:?]
