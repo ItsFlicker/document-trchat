@@ -2,6 +2,12 @@
 
 ## Kether动作
 
+### Cancel
+
+> 取消玩家的一次聊天
+
+`cancel`
+
 ### Channel
 
 > 让玩家加入或退出频道
@@ -13,6 +19,31 @@
 > 检测或过滤文本中的敏感词
 
 `filter (check|get) {text}`
+
+## 交互
+
+### TrChatAPI
+
+```kotlin
+interface TrChatAPI {
+    fun getComponentManager(): ComponentManager
+    fun getChannelManager(): ChannelManager
+    fun getFilterManager(): FilterManager
+    fun getClientMessageManager(): ClientMessageManager
+    fun getProxyMessageManager(): ProxyMessageManager
+}
+```
+
+通过`TrChat.api()`获取实例
+
+### HookPlugin
+
+```kotlin
+object HookPlugin {
+    /* 注册自定义物品展示方法 */
+    fun registerDisplayItemHook(name: String, func: BiFunction<ItemStack, Player, ItemStack>)
+}
+```
 
 ## 事件
 
@@ -63,19 +94,3 @@ class CustomDatabaseEvent(val name: String, var database: Database? = null) : Bu
         get() = false
 }
 ```
-
-## 交互
-
-### TrChatAPI
-
-```kotlin
-interface TrChatAPI {
-    fun getComponentManager(): ComponentManager
-    fun getChannelManager(): ChannelManager
-    fun getFilterManager(): FilterManager
-    fun getClientMessageManager(): ClientMessageManager
-    fun getProxyMessageManager(): ProxyMessageManager
-}
-```
-
-通过`TrChat.api()`获取实例

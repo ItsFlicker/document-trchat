@@ -1,6 +1,20 @@
 # 更新日志
 
 ## VERSION 2.0
+- #### 2.0.4 (2023.7.31)
+  - 增加/ignore `player` `[true/false]`
+  - 增加/trchat clear `player`
+  - 增加/trchat tellsimple `component`
+  - 增加`cancel`动作
+  - 增加自定义物品展示的api
+  - 支持在GUI中查看物品
+  - 更正配置文件
+  - 优化
+
+- #### 2.0.3 (2023.7.25)
+  - 增加%trchat_(lastmessage/lastprivatemessage)_uncolored%
+  - 修复频道命令权限错误
+
 - #### 2.0.2 (2023.7.20)
   - 支持hover内使用Kether内联
   - 增加%trchat_lastprivatemessage%
