@@ -31,7 +31,7 @@ Mention:
   Permission: 'none' # 不需要权限
   Cooldown: '30s' # 冷却时间30秒
   Notify: true # 是否发送ActionBar和声音提醒
-  Actions: [ ] # 执行的Kether动作
+  Action: [ ] # 执行的Kether动作
 ```
 
 ## @所有玩家功能
@@ -48,7 +48,7 @@ Mention-All:
     - "@everybody"
     - "@所有人"
     - "@全体成员"
-  Actions: [ ]
+  Action: [ ]
 ```
 
 ## 展示物品
@@ -59,7 +59,7 @@ Item-Show:
   Permission: 'none'
   Cooldown: '30s'
   Origin-Name: false # 是否使用物品原始名称
-  Compatible: false # 是否启用兼容模式 (报错时使用)
+  Compatible: false # 是否启用兼容模式 (出现问题时使用)
   Keys:
     - "%i%"
     - "%i"
@@ -67,7 +67,19 @@ Item-Show:
     - "%item"
     - "[i]"
     - "[item]"
-    Actions: [ ]
+    Action: [ ]
+```
+
+### 示例
+
+```yaml
+    Action: |-
+      if player op then {
+        tell "你展示了你的物品!"
+      } else {
+        tell "你不能展示物品!"
+        cancel
+      }
 ```
 
 ## 展示背包
@@ -80,6 +92,7 @@ Inventory-Show:
   Keys:
     - '[inv]'
     - '[inventory]'
+  Action: [ ]
 ```
 
 ## 展示末影箱
@@ -92,7 +105,7 @@ EnderChest-Show:
   Keys:
     - '[ender]'
     - '[enderchest]'
-  Actions: [ ]
+  Action: [ ]
 ```
 
 ## 展示图片
@@ -103,7 +116,7 @@ Image-Show:
   Permission: 'trchat.function.imageshow'
   Cooldown: '1m'
   Key: '!\[([^;]*)\]\(([a-zA-Z]+://[^\s]*)\)' # 正则表达式
-  Actions: [ ]
+  Action: [ ]
 ```
 
 ### 示例
