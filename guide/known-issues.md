@@ -1,6 +1,6 @@
 # 已知问题
 
-请仔细浏览此页面，确定没有你的问题或解决方法失效后，再开启issue
+请仔细浏览此页面，确定没有你的问题或解决方法失效后，再开启issue或在群内提问
 
 ## 不支持 Folia
 
@@ -89,6 +89,14 @@ java.lang.NullPointerException: null
 Options:
   Double-Transfer: false
 ```
+
+## 聊天发包过大无法显示
+
+```
+This chat component is too big to show ( > xxx )
+```
+
+> 尝试增大 **TrChat/settings.yml** 中的 **Component-Max-Length**
 
 ## 玩家因"聊天消息验证失败"被踢出
 
