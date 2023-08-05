@@ -6,6 +6,10 @@
 
 以下为每个**JSON组件**的构成
 
+::: tip
+文本均支持[Kether内联语句](https://www.yuque.com/sacredcraft/kether/action-inline)
+:::
+
 ### text
 
 显示的文字 (不适用于**msg**)

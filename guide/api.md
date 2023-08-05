@@ -1,25 +1,5 @@
 # API
 
-## Kether动作
-
-### Cancel
-
-> 取消玩家的一次聊天
-
-`cancel`
-
-### Channel
-
-> 让玩家加入或退出频道
-
-`channel (join|quit) {channel} [hint {boolean}]`
-
-### Filter
-
-> 检测或过滤文本中的敏感词
-
-`filter (check|get) {text}`
-
 ## 交互
 
 ### TrChatAPI

@@ -1,5 +1,9 @@
 # 配置
 
+## 语言文件
+
+[使用方法](https://plugins.ptms.ink/function/language/)
+
 ## settings.yml
 
 ```yaml

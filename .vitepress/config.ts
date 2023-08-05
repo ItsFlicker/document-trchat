@@ -48,7 +48,9 @@ export default defineConfig({
               items: [
                 { text: '命令', link: '/guide/commands' },
                 { text: '功能', link: '/guide/functions' },
-                { text: '颜色', link: '/guide/colors' }
+                { text: '颜色', link: '/guide/colors' },
+                { text: '条件与动作', link: '/guide/expressions' },
+                { text: 'PlaceholderAPI', link: '/guide/placeholderapi' }
               ]
             },
             {
