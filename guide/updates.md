@@ -1,6 +1,14 @@
 # 更新日志
 
 ## VERSION 2.0
+- #### 2.0.5 (2023.8.10)
+  - 添加对DiscordSRV的支持
+  - 增加更多papi变量
+  - 修复私聊消息出现在dynmap
+  - 修复部分版本nms错误
+  - 修复禁言指令
+  - 优化展示性能
+
 - #### 2.0.4 (2023.7.31)
   - 增加/ignore `player` `[true/false]`
   - 增加/trchat clear `player`

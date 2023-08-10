@@ -10,22 +10,26 @@ Options:
   Speak-Condition: 'perm *trchat.admin'
   # 有权限时自动加入
   Auto-Join: true
+  # 是否为私聊频道
+  Private: false
+  # 聊天可视范围
+  Target: 'all/single_world/distance;10/self'
   # 是否跨服
   Proxy: false
   # 是否必须跨服才能使用
   Force-Proxy: false
+  # 二次转发(子服>跨服端>子服)
+  Double-Transfer: true
   # 哪些子服可以接收,写端口名,~代表所有
   Ports: 25565;...;.../~
   # 禁用function.yml的模块
   Disabled-Functions: ['Mention']
   # 有敏感词就会禁止发送
   Filter-Before-Sending: false
-  # 是否为私聊频道
-  Private: false
-  # 范围
-  Target: 'all/single_world/distance;10/self'
-  # 二次转发(子服>跨服端>子服)
-  Double-Transfer: true
+  # 是否传输消息到DiscordSRV
+  Send-To-Discord: true
+  # 是否接受DiscordSRV的消息
+  Receive-From-Discord: true
 ```
 
 ## 绑定 Bindings
