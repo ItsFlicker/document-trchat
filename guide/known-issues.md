@@ -102,6 +102,8 @@ This chat component is too big to show ( > xxx )
 
 > 关闭 **server.properties** 中的 **enforce-secure-profile**
 
+注: 原版/say等指令被踢出与trchat无关
+
 ## 玩家名字被过滤
 
 - 关闭filter.yml中的Enable.Chat
