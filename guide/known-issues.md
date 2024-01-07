@@ -4,7 +4,7 @@
 
 ## 不支持 Folia
 
-**[无解](https://github.com/TabooLib/taboolib/issues/317)**
+~~[无解](https://github.com/TabooLib/taboolib/issues/317)~~ 可能有戏
 
 ## kotlin无法加载
 
@@ -71,6 +71,13 @@ Loading class 'com.mysql.jdbc.Driver'.This is deprecated.
 
 > 关闭 **CMI/Settings/Chat.yml** 中的 **Colors.CleanUp**
 
+## EZColors (之类的插件) 不生效
+
+> 更改EZColors的配置文件
+```yaml
+ChatListener: HIGH
+```
+
 ## 聊天无法向下版本跨服
 
 ```
@@ -113,4 +120,12 @@ This chat component is too big to show ( > xxx )
 Events:
   Process: |-
     filter get &message
+```
+
+## 如何支持换行
+
+> 将单引号改为双引号, 示例:
+```yaml
+part-before-player:
+  text: "\n"
 ```
