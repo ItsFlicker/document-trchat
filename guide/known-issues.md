@@ -2,10 +2,6 @@
 
 请仔细浏览此页面，确定没有你的问题或解决方法失效后，再开启issue或在群内提问
 
-## 不支持 Folia
-
-~~[无解](https://github.com/TabooLib/taboolib/issues/317)~~ 可能有戏
-
 ## kotlin无法加载
 
 ```
@@ -108,6 +104,8 @@ This chat component is too big to show ( > xxx )
 ## 玩家因"聊天消息验证失败"被踢出
 
 > 关闭 **server.properties** 中的 **enforce-secure-profile**
+
+> 关闭 **settings.yml** 中的 **Cheat-Client-Secure-Chat**
 
 注: 原版/say等指令被踢出与trchat无关
 

@@ -26,6 +26,10 @@ Options:
   Component-Max-Length: 32766
   # 是否允许Kether宽容解析
   Kether-Allow-Tolerance-Parser: true
+  # 欺骗客户端已开启安全聊天 (阻止右上角弹窗)
+  Cheat-Client-Secure-Chat: true
+  # 禁用的命令
+  Disabled-Commands: []
   
 
 # 默认频道
@@ -96,9 +100,10 @@ Cloud-Thesaurus:
   Enabled: true
   # 忽略词库中的内容
   Ignored: ['nt'] 
-  # 词库地址 (感谢南城提供的词库)
+  # 词库地址
   Urls: 
     - 'https://raw.githubusercontent.com/Yurinann/Filter-Thesaurus-Cloud/main/database.json'
+    - 'https://raw.githubusercontent.com/konsheng/Sensitive-lexicon/main/ThirdPartyCompatibleFormats/TrChat/SensitiveLexicon.json'
 #本地词库
 Local:
   - 'NMSL'

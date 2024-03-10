@@ -10,9 +10,9 @@
 | Paper             | :white_check_mark: |
 | Purpur            | :white_check_mark: |
 | CatServer         | :white_check_mark: |
-| Arclight          | :o:                |
+| Arclight          | :white_check_mark: |
 | Mohist            | :o:                |
-| Folia             | :x:                |
+| Folia             | :o:                |
 
 ::: tip
 TrChat 需要联网条件下安装

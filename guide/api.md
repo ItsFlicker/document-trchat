@@ -29,6 +29,8 @@ object HookPlugin {
 
 ### TrChatEvent
 
+发送聊天时触发
+
 ```java
 public class Demo implements Listener {
     
@@ -45,6 +47,39 @@ public class Demo implements Listener {
 ::: tip
 自TrChat-2.0.0起, 已不会取消AsyncPlayerChatEvent
 :::
+
+### TrChatItemShowEvent
+
+展示物品时触发
+
+```kotlin
+class TrChatItemShowEvent(
+    val player: Player,
+    var item: ItemStack,
+    val isCompatibleMode: Boolean
+) : BukkitProxyEvent() {
+
+    override val allowCancelled: Boolean
+        get() = false
+
+}
+```
+
+### TrChatReceiveEvent
+
+每个玩家收到聊天时触发
+
+```kotlin
+class TrChatReceiveEvent(
+    val receiver: CommandSender,
+    var sender: UUID?,
+    var message: ComponentText,
+    val session: ChatSession? = (receiver as? Player)?.session
+): BukkitProxyEvent() {
+
+    val player = session?.player
+}
+```
 
 ### TrChatReloadEvent
 
