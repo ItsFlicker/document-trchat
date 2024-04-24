@@ -46,6 +46,7 @@ export default defineConfig({
             {
               text: '使用',
               items: [
+                { text: '跨服', link: '/guide/proxy' },
                 { text: '命令', link: '/guide/commands' },
                 { text: '功能', link: '/guide/functions' },
                 { text: '颜色', link: '/guide/colors' },
