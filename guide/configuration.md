@@ -2,7 +2,7 @@
 
 ## 语言文件
 
-[使用方法](https://plugins.ptms.ink/function/language/)
+[使用方法](https://taboolib.feishu.cn/wiki/DN0Bw4Vnmi5nOQky9OAcviN5n5b)
 
 ## settings.yml
 
@@ -28,6 +28,8 @@ Options:
   Kether-Allow-Tolerance-Parser: true
   # 欺骗客户端已开启安全聊天 (阻止右上角弹窗)
   Cheat-Client-Secure-Chat: true
+  # 是否启用发包/处理包
+  Use-Packets: true
   # 禁用的命令
   Disabled-Commands: []
   
@@ -77,12 +79,21 @@ Chat:
 Color:
   # 聊天颜色
   Chat: true
-  # 牌子颜色
+  # 告示牌颜色
   Sign: true
   # 铁砧颜色
   Anvil: true
   # 书本颜色
   Book: true
+
+# 是否启用行内复合文本
+Simple-Component:
+  # 悬浮文字
+  Hover: false
+  # 铁砧
+  Anvil: false
+  # 告示牌
+  Sign: false
 ```
 
 ## filter.yml

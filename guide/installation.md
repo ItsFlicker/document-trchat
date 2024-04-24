@@ -24,30 +24,9 @@ TrChat 需要联网条件下安装
 
 * 下载最新[发行版本](https://github.com/TrPlugins/TrChat/releases)或[开发版本](https://github.com/TrPlugins/TrChat/actions) (并非source版本)
 * 将插件放入服务端下 `plugins` 文件夹
-* 如有BungeeCord或Velocity群组端，同样放入 `plugins` 文件夹
+* 配置[跨服功能](./proxy.md)
 * 重启服务器
 
 ::: warning
 必须确保子服与群组端安装了**同一版本**的TrChat
 :::
-
-## 使用Redis
-
-::: info
-TrChat 版本: 2.0.0+
-:::
-
-settings.yml
-
-```yaml
-Redis:
-  enabled: false
-  host: localhost
-  port: 6379
-  user: ~
-  password: ~
-  connect: 32
-  timeout: 1000
-```
-
-可完全代替BungeeCord/Velocity

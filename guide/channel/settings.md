@@ -4,12 +4,14 @@
 
 ```yaml
 Options:
-  # 需要权限才能可以加入频道(听到消息)
+  # 需要权限才能可以加入频道
   Join-Permission: 'trchat.admin'
-  # 需要条件才能发送消息
+  # 需要权限才能可以听到消息
+  Listen-Permission: 'trchat.admin'
+  # 需要Kether条件才能发送消息
   Speak-Condition: 'perm *trchat.admin'
-  # 有权限时自动加入
-  Auto-Join: true
+  # 有权限时总是接收消息
+  Always-Listen: true
   # 是否为私聊频道
   Private: false
   # 聊天可视范围
@@ -18,7 +20,7 @@ Options:
   Proxy: false
   # 是否必须跨服才能使用
   Force-Proxy: false
-  # 二次转发(子服>跨服端>子服)
+  # 二次转发(子服->跨服端->子服)
   Double-Transfer: true
   # 哪些子服可以接收,写端口名,~代表所有
   Ports: 25565;...;.../~
