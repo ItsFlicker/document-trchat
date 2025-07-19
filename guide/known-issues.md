@@ -21,7 +21,7 @@ java.lang.RuntimeException: Runtime environment setup failed, please feedback! (
         at java.lang.Thread.run(Thread.java:833) ~[?:?]
 ```
 
-> 尝试删除 **libs** 文件夹后重新启动服务端
+> 尝试删除 **libraries** 文件夹后重新启动服务端
 
 ## 1.8版本加载错误
 
@@ -69,6 +69,13 @@ Loading class 'com.mysql.jdbc.Driver'.This is deprecated.
 
 ## EZColors (之类的插件) 不生效
 
+> 更改聊天频道文件的默认颜色
+```yaml
+default-color: 
+  - '%ezcolors_color%{condition: papi %ezcolors_color_set%}'
+  - '&7'
+```
+
 > 更改EZColors的配置文件
 ```yaml
 ChatListener: HIGH
@@ -86,7 +93,7 @@ java.lang.NullPointerException: null
         ...
 ```
 
-聊天频道文件中设置
+在聊天频道文件中设置
 
 ```yaml
 Options:

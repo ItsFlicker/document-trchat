@@ -30,13 +30,9 @@
 
 > 切换监听玩家私聊模式
 
-* **/trchat vanish**
-
-> 开启后此玩家无法用命令补全, 也无法被@
-
 * **/trchat removemessage `message`**
 
-> 撤回玩家消息
+> 撤回玩家消息 (不稳定)
 
 ::: warning
 Arclight端暂时无法使用
