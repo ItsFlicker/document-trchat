@@ -20,6 +20,25 @@ world:
   text: '&8[&3%player_world%&8]'
 ```
 
+### head
+
+显示一个玩家头颅 (2.3.17+), 先于text加载
+
+支持三种内容:
+
+* `<玩家名>` 按名称获取头颅
+* `<UUID>` 按UUID获取头颅
+* `纹理URL` (包含`/`) 按皮肤纹理获取头颅
+
+可在内容后加`:true/false`控制是否作为帽子 (默认`true`)
+
+示例:
+```yaml
+player:
+  head: '%player_name%:true'
+  text: '&7%player_name%'
+```
+
 ### insertion
 
 点击后在聊天栏插入文字
@@ -64,13 +83,9 @@ world:
     &r
 ```
 
-### hoveritem (WIP)
-
-放上后出现物品
-
-### hoverentity (WIP)
-
-放上后出现实体
+::: warning
+`hoveritem`/`hoverentity` 目前暂不支持
+:::
 
 ## 点击事件
 
@@ -120,4 +135,33 @@ tag:
 tag:
   text: '&8[&2主播&8]'
   copy: 'https://...'
+```
+
+### file
+
+点击后打开本地文件
+
+示例:
+```yaml 
+tag:
+  text: '&8[&2公告&8]'
+  file: 'plugins/TrChat/notice.txt'
+```
+
+## 文字阴影
+
+> 2.3.10+ 支持为文字设置阴影
+
+### shadow
+
+* `shadow: false` 关闭阴影
+* `shadow: '#RRGGBB'` 设置阴影颜色
+* `shadow: '#RRGGBB:0.5'` 设置阴影颜色和透明度 (alpha 0~1浮点数)
+* 也支持命名颜色 (如`white`)
+
+示例:
+```yaml 
+world:
+  text: '&8[&3%player_world%&8]'
+  shadow: '#000000:0.25'
 ```

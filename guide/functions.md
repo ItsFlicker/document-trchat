@@ -22,6 +22,10 @@ Command-Controller:
 TrChat 仅提供一些简单命令控制功能，若有更多需求请使用其他插件
 :::
 
+::: tip
+拥有`trchat.bypass.cmdcooldown`权限的玩家不受命令冷却限制
+:::
+
 ## @功能
 
 ```yaml
@@ -31,6 +35,7 @@ Mention:
   Permission: 'none' # 不需要权限
   Cooldown: '30s' # 冷却时间30秒
   Notify: true # 是否发送ActionBar和声音提醒
+  Pattern: '@? ?(names)' # 自定义@匹配正则 (2.4.1+), (names)为玩家名列表占位符
   Action: [ ] # 执行的Kether动作
 ```
 
@@ -136,6 +141,10 @@ shareQQ:
     pattern: 'QQ( )?[1-9]([0-9]{5,11})'
     # 变量 {0} 是按下方表达式提取后的内容, 可以不配置此项
     text-filter: '[1-9]([0-9]{5,11})'
+    # 冷却时间 (2.3.7+)
+    cooldown: '30s'
+    # 冷却中在ActionBar显示的消息, {0}为剩余秒数 (2.3.8+)
+    cooldown-message: '&c该功能冷却中, 剩余 {0} 秒'
     # 自定义显示 JSON 组件
     display:
       text: '&8[&3&lQQ&8]'
@@ -150,3 +159,7 @@ shareQQ:
         - '&8[&c!&8] &7交友需谨慎'
       url: 'https://wpa.qq.com/msgrd?v=3&uin={0}&site=qq&menu=yes'
 ```
+
+::: tip
+拥有`trchat.bypass.customcd`权限的玩家不受自定义功能冷却限制
+:::

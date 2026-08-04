@@ -6,16 +6,16 @@
 Options:
   # 需要权限才能可以加入频道
   Join-Permission: 'trchat.admin'
-  # 需要权限才能可以听到消息
+  # 需要权限才能可以听到消息 (默认跟随Join-Permission)
   Listen-Permission: 'trchat.admin'
   # 需要Kether条件才能发送消息
   Speak-Condition: 'perm *trchat.admin'
-  # 有权限时总是接收消息
+  # 有权限时总是接收消息 (兼容旧配置Auto-Join)
   Always-Listen: true
   # 是否为私聊频道
   Private: false
-  # 聊天可视范围
-  Target: 'all/single_world/distance;10/self'
+  # 聊天可视范围 (ALL/SINGLE_WORLD/DISTANCE/SELF, DISTANCE后加;距离)
+  Target: 'ALL'
   # 是否跨服
   Proxy: false
   # 是否必须跨服才能使用
@@ -28,10 +28,12 @@ Options:
   Disabled-Functions: ['Mention']
   # 有敏感词就会禁止发送
   Filter-Before-Sending: false
-  # 是否传输消息到DiscordSRV
+  # 是否传输消息到DiscordSRV (私聊频道默认false, 普通频道默认true)
   Send-To-Discord: true
   # 是否接受DiscordSRV的消息
   Receive-From-Discord: true
+  # 转发到Discord的特定频道 (留空使用DiscordSRV默认频道)
+  Discord-Channel: ''
 ```
 
 ## 绑定 Bindings

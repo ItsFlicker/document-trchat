@@ -1,11 +1,13 @@
-export { Fragment } from '../../';
+// Intentionally not using a relative path to take advantage of
+// the TS version resolution mechanism
+export { Fragment } from 'preact';
 import {
 	ComponentType,
 	ComponentChild,
 	ComponentChildren,
 	VNode,
 	Attributes
-} from '../../';
+} from 'preact';
 import { JSXInternal } from '../../src/jsx';
 
 export function jsx(
@@ -46,5 +48,15 @@ export function jsxDEV<P>(
 	props: Attributes & P & { children?: ComponentChildren },
 	key?: string
 ): VNode<any>;
+
+// These are not expected to be used manually, but by a JSX transform
+export function jsxTemplate(
+	template: string[],
+	...expressions: any[]
+): VNode<any>;
+export function jsxAttr(name: string, value: any): string | null;
+export function jsxEscape<T>(
+	value: T
+): string | null | VNode<any> | Array<string | null | VNode>;
 
 export { JSXInternal as JSX };

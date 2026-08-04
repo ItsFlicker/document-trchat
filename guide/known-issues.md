@@ -61,7 +61,9 @@ Loading class 'com.mysql.jdbc.Driver'.This is deprecated.
 
 - #### 聊天重复
 
-> 关闭 **CMI/Settings/Chat.yml** 中的 **ModifyChatFormat** 和 **ClickHoverMessages**
+> 自2.4.9起 TrChat 已自动解决, 无需修改CMI配置文件
+>
+> 使用旧版本时, 请关闭 **CMI/Settings/Chat.yml** 中的 **ModifyChatFormat** 和 **ClickHoverMessages**
 
 - #### 颜色权限失效
 

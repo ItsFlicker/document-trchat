@@ -14,13 +14,25 @@
 
 > 让玩家加入或退出频道
 
-`channel (join|quit) {channel} [hint {boolean}]`
+`channel (join|quit|leave) [channel] [hint {boolean}]`
 
 ### Filter (shared)
 
 > 检测或过滤文本中的敏感词
 
-`filter (check|get) {text}`
+`filter (check|has|have) {text}` -> 是否存在敏感词
+
+`filter (get|process) {text}` -> 返回过滤后的文本
+
+### Mute (shared)
+
+> 禁言相关 (2.3.7+)
+
+`mute check` -> 玩家是否被禁言
+
+`mute set [time] [reason]` -> 禁言玩家 (时间默认`999d`, 原因默认`null`)
+
+`mute unset` -> 解除禁言
 
 ## JavaScript动作
 

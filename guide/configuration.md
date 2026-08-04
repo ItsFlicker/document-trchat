@@ -23,16 +23,17 @@ Options:
   # 是否禁止玩家使用tab补全命令
   Prevent-Tab-Complete: false
   # 聊天发包最大长度限制
-  Component-Max-Length: 32766
+  Component-Max-Length: 32700
   # 是否允许Kether宽容解析
   Kether-Allow-Tolerance-Parser: true
+  # 是否总是取消原版聊天事件 (需要配合其他插件使用时开启)
+  Always-Cancel-Chat-Event: false
   # 欺骗客户端已开启安全聊天 (阻止右上角弹窗)
-  Cheat-Client-Secure-Chat: true
+  Cheat-Client-Secure-Chat: false
   # 是否启用发包/处理包
   Use-Packets: true
   # 禁用的命令
   Disabled-Commands: []
-  
 
 # 默认频道
 Channel:
@@ -52,7 +53,7 @@ Database:
     # 数据库密码
     password: root
     # 数据库名
-    database: trchat
+    database: trixey
     # 数据库表名
     table: trchat_user_data
 
@@ -69,11 +70,19 @@ Redis:
 # 聊天功能
 Chat:
   # 内容相似度防刷屏 (设为0禁用)
-  Anti-Repeat: 0.75
+  Anti-Repeat: 0.85
   # 聊天间隔冷却
-  Cooldown: '2s'
+  Cooldown: '2.0s'
   # 最大聊天长度
   Length-Limit: 100
+  # 没有发言权限时禁止编辑 (true开启 false关闭)
+  Permission-Check:
+    # 告示牌
+    Sign: false
+    # 书与笔
+    Book: false
+    # 铁砧
+    Anvil: false
 
 # 颜色转换
 Color:
@@ -94,12 +103,24 @@ Simple-Component:
   Anvil: false
   # 告示牌
   Sign: false
+
+# MiniMessage
+MiniMessage:
+  # 开启后频道文件中的text将使用MiniMessage解析
+  Text: false
 ```
+
+## MiniMessage
+
+MiniMessage 是 Adventure 提供的富文本格式, 支持更丰富的颜色、渐变、装饰等语法
+
+* `settings.yml` -> `MiniMessage.Text: true` 开启后, 频道文件中的 `text` 将使用 MiniMessage 解析
+* `/trchat tellmini <玩家> <消息>` 可单独向玩家发送 MiniMessage 消息 (玩家为`*`时向所有在线玩家广播)
 
 ## filter.yml
 
 ```yaml
-Enable: 
+Enable:
   # 聊天内容是否检测
   Chat: true
   # 告示牌是否检测
@@ -110,16 +131,19 @@ Enable:
 Cloud-Thesaurus:
   Enabled: true
   # 忽略词库中的内容
-  Ignored: ['nt'] 
+  Ignored: ['nt']
   # 词库地址
-  Urls: 
-    - 'https://raw.githubusercontent.com/Yurinann/Filter-Thesaurus-Cloud/main/database.json'
-    - 'https://raw.githubusercontent.com/konsheng/Sensitive-lexicon/main/ThirdPartyCompatibleFormats/TrChat/SensitiveLexicon.json'
-#本地词库
+  Urls:
+    - 'https://raw.githubusercontent.com/Yurinann/Filter-Thesaurus-Cloud/main/database.json' # 感谢南城提供的词库
+    # 有时导致误判 自行开启
+    # - 'https://raw.githubusercontent.com/konsheng/Sensitive-lexicon/main/ThirdPartyCompatibleFormats/TrChat/SensitiveLexicon.json'
+# 本地词库
 Local:
-  - 'NMSL'
-  - 'fuck'
-  - 'shit'
+  - NMSL
+  - fuck
+  - shit
+# 匹配时忽略的标点符号
+Ignored-Punctuations: ['!','.',',','#','$','%','&','*','(',')','|','?','/','@','"','\',';','[',']','{','}','+','~','-','_','=','^','<','>',' ','　','！','。','，','￥','（','）','？','、','“','‘','；','【','】','——','……','《','》','\\', '`']
 # 敏感词白名单 (WIP)
 WhiteList: ['has been']
 # 替换成的内容 (WIP)

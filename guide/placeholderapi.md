@@ -9,7 +9,7 @@ TrChat提供的默认频道中使用了`player`和`server`拓展
 ## TrChat变量
 
 - %trchat_channel% -> 玩家所处的频道
-- %trchat_lastmessage(_uncolored)% -> 玩家最后一次发送的消息
+- %trchat_lastpublicmessage(_uncolored)% / %trchat_lastmessage(_uncolored)% -> 玩家最后一次发送的公共消息 (lastmessage为lastpublicmessage的别名)
 - %trchat_lastprivatemessage(_uncolored)% -> 玩家最后一次发送的私聊
 - %trchat_toplayer% -> 玩家最后一次的私聊对象
 - %trchat_spy% -> 玩家是否开启监听私聊模式
