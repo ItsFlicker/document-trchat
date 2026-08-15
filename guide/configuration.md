@@ -34,6 +34,9 @@ Options:
   Use-Packets: true
   # 禁用的命令
   Disabled-Commands: []
+  # 在这些世界禁用聊天监听器，世界名支持正则（完全匹配）
+  # 示例: ['world', 'lobby', 'minigame_.*']
+  Disabled-Worlds: []
 
 # 默认频道
 Channel:
@@ -41,12 +44,12 @@ Channel:
 
 # 数据库
 Database:
-  # 数据库类型 (SQLite,SQL)
+  # 数据库类型 (SQLite,SQL,POSTGRESQL)
   Method: SQLite
   SQL:
     # 数据库地址
     host: localhost
-    # 数据库端口
+    # 数据库端口 (MySQL: 3306, PostgreSQL: 5432)
     port: 3306
     # 数据库用户名
     user: root
