@@ -16,7 +16,6 @@ Options:
 ### BungeeCord / Velocity
 
 * 将插件放入`plugins`文件夹, 即可正常使用
-* 跨服端上的频道文件, 所有子服都可使用
 * `/muteallservers on/off` 可控制所有子服的全体禁言
 * 自2.4.3起支持监听跨服私聊
 

@@ -1,6 +1,19 @@
 # 更新日志
 
 ## VERSION 2.0
+- #### 2.5.0 (2026.8.20)
+  - 新增 `Options.Disabled-Worlds` 配置, 在指定世界禁用 TrChat 的聊天处理 (世界名支持正则, 完全匹配, 重载后生效)
+  - 修复@功能: @提示不再无条件发送, 只有真正收到 (能看到) 该消息且被@的玩家才会收到提示 (修复@被屏蔽/禁言玩家仍收到提示的问题)
+  - @提示现在同样适用于私聊和跨服场景 (跨服转发时会携带被@的玩家信息)
+  - DiscordSRV 转发渲染不再产生游戏内@提示
+
+- #### 2.4.14 (2026.8.20)
+  - 新增 `special-chars.yml` 配置文件, 自定义特定字符 (如Emoji) 的默认颜色
+  - 频道 `msg` 新增 `special-char` 配置 (`Enabled` / `special-char-color`), 解决资源包中彩色Emoji在聊天中变色的问题
+
+- #### 2.4.13 (2026.8.13)
+  - 兼容 Velocity 4
+
 - #### 2.4.12 (2026.8.12)
   - 新增 PostgreSQL 数据存储支持 (`Database.Method: POSTGRESQL`, 配置复用 `Database.SQL` 段, 首次启动自动下载驱动)
   - 升级 TabooLib 至 6.3.0-75b18a2 (修复 PostgreSQL 驱动无法自动加载问题)

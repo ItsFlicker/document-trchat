@@ -120,6 +120,21 @@ MiniMessage 是 Adventure 提供的富文本格式, 支持更丰富的颜色、�
 * `settings.yml` -> `MiniMessage.Text: true` 开启后, 频道文件中的 `text` 将使用 MiniMessage 解析
 * `/trchat tellmini <玩家> <消息>` 可单独向玩家发送 MiniMessage 消息 (玩家为`*`时向所有在线玩家广播)
 
+## special-chars.yml
+
+> 版本要求: 2.4.14+
+
+自定义特定字符 (如 Emoji) 的默认颜色
+
+```yaml
+SpecialChars: []
+```
+
+* `SpecialChars`: 需要固定颜色的字符列表 (支持单个字符与 Emoji 等 Unicode 字符)
+* 配置完成后在对应频道的 `msg` 段开启 `special-char` 功能并指定颜色, 详见[频道格式](channel/format#消息设置-msg)
+* 如果服务器使用包含彩色 Emoji 的资源包, 可在频道配置中将 `special-char-color` 设为 `&f`, 解决聊天中 Emoji 变色的现象
+* 修改后执行 `/trchat reload` 或 `重载插件` 生效 (文件内附带了完整的 Emoji 示例列表可供参考)
+
 ## filter.yml
 
 ```yaml
